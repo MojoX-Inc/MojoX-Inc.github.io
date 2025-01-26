@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.3rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card button {
+    padding: 0.7rem 1.5rem;
+    background: #1e3c72;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #2a5298;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.team-section {
+    padding: 3rem;
+    text-align: center;
+    background: #f5f5f5;
+    color: black;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.team-member {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.github-section {
+    padding: 3rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.github-section a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    background: #1e3c72;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.github-section a:hover {
+    background: #2a5298;
+}
+
+.github-section svg {
+    width: 24px;
+    height: 24px;
+}
+
+.gallery-section {
+    padding: 3rem;
+    text-align: center;
+    background: #ffffff;
+    color: black;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
