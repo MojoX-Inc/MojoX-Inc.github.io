@@ -1,10 +1,24 @@
+
+:root {
+    --primary-color: #1e3c72;
+    --secondary-color: #2a5298;
+    --background-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --text-color: white;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-hover-shadow: rgba(0, 0, 0, 0.3);
+    --section-bg-light: #f5f5f5;
+    --section-bg-dark: rgba(0, 0, 0, 0.1);
+}
+
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: white;
+    background: var(--background-gradient);
+    color: var(--text-color);
     overflow-x: hidden;
 }
+
 
 header {
     text-align: center;
@@ -31,8 +45,9 @@ main {
     padding: 2rem;
 }
 
+
 .card {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--card-bg);
     color: black;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -43,7 +58,7 @@ main {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 25px var(--card-hover-shadow);
 }
 
 .card h2 {
@@ -58,16 +73,17 @@ main {
 
 .card button {
     padding: 0.7rem 1.5rem;
-    background: #1e3c72;
+    background: var(--primary-color);
     border: none;
     border-radius: 0.5rem;
-    color: white;
+    color: var(--text-color);
     font-size: 1rem;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .card button:hover {
-    background: #2a5298;
+    background: var(--secondary-color);
 }
 
 footer {
@@ -76,10 +92,11 @@ footer {
     background: rgba(0, 0, 0, 0.2);
 }
 
+
 .team-section {
     padding: 3rem;
     text-align: center;
-    background: #f5f5f5;
+    background: var(--section-bg-light);
     color: black;
 }
 
@@ -116,27 +133,28 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .github-section {
     padding: 3rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--section-bg-dark);
 }
 
 .github-section a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     font-size: 1.5rem;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.7rem 1.5rem;
-    background: #1e3c72;
+    background: var(--primary-color);
     border-radius: 0.5rem;
     transition: background 0.3s ease;
 }
 
 .github-section a:hover {
-    background: #2a5298;
+    background: var(--secondary-color);
 }
 
 .github-section svg {
@@ -144,10 +162,11 @@ footer {
     height: 24px;
 }
 
+
 .gallery-section {
     padding: 3rem;
     text-align: center;
-    background: #ffffff;
+    background: white;
     color: black;
 }
 
