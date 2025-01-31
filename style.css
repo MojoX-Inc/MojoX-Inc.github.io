@@ -48,43 +48,70 @@ main {
 
 .card {
     background: var(--card-bg);
-    color: black;
+    color: var(--text-color, black); 
     border-radius: 1rem;
     padding: 1.5rem;
     text-align: center;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; 
+    position: relative; 
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); 
+    z-index: -1; 
+    border-radius: inherit;
 }
 
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 25px var(--card-hover-shadow);
+    filter: brightness(1.05); 
 }
 
 .card h2 {
     font-size: 1.8rem;
+    font-weight: 600; 
     margin-bottom: 1rem;
+    color: var(--heading-color, #333); 
+    text-transform: capitalize; 
 }
 
 .card p {
     font-size: 1rem;
+    line-height: 1.5;
     margin-bottom: 1rem;
+    color: var(--text-color, #555); 
 }
 
 .card button {
-    padding: 0.7rem 1.5rem;
+    padding: 0.8rem 1.6rem; 
     background: var(--primary-color);
     border: none;
     border-radius: 0.5rem;
-    color: var(--text-color);
+    color: var(--button-text-color, white); 
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: 600; 
 }
 
 .card button:hover {
     background: var(--secondary-color);
+    transform: scale(1.05); 
 }
+
+.card button:active {
+    transform: scale(1); 
+}
+
 
 footer {
     text-align: center;
