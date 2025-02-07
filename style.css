@@ -224,6 +224,14 @@ footer {
     transform: scale(1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow when active */
 }
+
+.github-section {
+    overflow-anchor: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .github-section a {
     text-decoration: none;
     color: var(--text-color);
