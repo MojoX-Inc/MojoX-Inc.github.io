@@ -177,14 +177,12 @@ footer {
 }
 
 .team-member img {
-    width: 120px; 
-    height: 120px; 
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12); 
-    object-fit: cover; 
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .team-member button {
     padding: 0.8rem 1.6rem; 
     background: var(--primary-color);
