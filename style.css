@@ -280,83 +280,45 @@ footer {
 }
 
 .gallery {
-    --gutter: 1rem;
-    --radius: 0.5rem;
-    --shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    --transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-    padding: var(--gutter);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-    gap: var(--gutter);
+    padding: 1rem;
+    overflow-anchor: none;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--radius);
-    transition: transform 0.3s var(--transition);
-}
-
 .gallery img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    aspect-ratio: 4/3;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    transition: all 0.3s var(--transition);
-    transform: translateZ(0);
-    background: linear-gradient(45deg, #f5f5f5 25%, #fff 50%, #f5f5f5 75%);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transform: translateZ(0); 
 }
 
 .gallery img:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    border-radius: calc(var(--radius) * 1.5);
-    z-index: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 0.75rem; 
 }
 
-/* Accessibility improvements */
-.gallery img:not([alt]) {
-    outline: 2px solid #ff4444;
-}
-
-.gallery img:not([alt])::after {
-    content: "Missing alt text";
+.gallery img:not([alt])::before {
+    content: "Image Description Missing";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0.5em;
-    background: #ff4444dd;
-    color: white;
-    font-size: 0.8em;
-    text-align: center;
+    color: transparent;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
-
-.gallery img[data-src] {
-    min-height: 200px;
-    background: #f0f0f0;
-}
-
-.gallery img:focus-visible {
-    outline: 2px solid #2196F3;
-    outline-offset: 2px;
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-    .gallery img {
-        transition: none;
+@keyframes fadeIn {
+    from {
+        transform: translateY(0px);
     }
-}
-
-
-@media (max-width: 480px) {
-    .gallery {
-        grid-template-columns: 1fr;
+    to {
+        opacity: 100%;
+        transform: translateY(-21px);
     }
 }
