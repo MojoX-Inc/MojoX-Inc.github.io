@@ -163,25 +163,24 @@ footer {
 }
 
 
-.team-member {
+ .team-member {
     background: white;
     border-radius: 1rem;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .team-member:hover {
-    transform: scale(1.06); 
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05);
 }
 
 .team-member img {
     width: 120px; 
     height: 120px; 
     border-radius: 50%;
-    margin-bottom: 1.25rem; 
+    margin-bottom: 1.25rem;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12); 
     object-fit: cover; 
 }
@@ -196,23 +195,18 @@ footer {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
     font-weight: 600;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .team-member button:hover {
     background: var(--secondary-color, #0056b3); 
-    transform: scale(1.06); 
+    transform: scale(1.06);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
 }
 
+
 .team-member button:active {
-    transform: scale(1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-}
-.github-section {
-    padding: 3rem;
-    text-align: center;
-    background: var(--section-bg-dark);
+    transform: scale(1); 
 }
 
 .github-section a {
