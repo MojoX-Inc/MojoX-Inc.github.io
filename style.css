@@ -294,21 +294,31 @@ footer {
     gap: 1rem;
     flex-wrap: wrap;
 }
-
 .gallery img {
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
     max-width: 100%;
     height: auto;
     cursor: pointer;
+    transform: translateZ(0); 
 }
 
 .gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 0.75rem; 
 }
 
+.gallery img:not([alt])::before {
+    content: "Image Description Missing";
+    position: absolute;
+    color: transparent;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
 @keyframes fadeIn {
     from {
         transform: translateY(0px);
