@@ -163,7 +163,7 @@ footer {
 }
 
 
- .team-member {
+.team-member {
     background: white;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -183,6 +183,7 @@ footer {
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .team-member button {
     padding: 0.8rem 1.6rem; 
     background: var(--primary-color);
@@ -196,11 +197,9 @@ footer {
 }
 
 .team-member button:hover {
-    background: var(--secondary-color, #0056b3); 
-    transform: scale(1.06);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    background: var(--secondary-color);
+    transform: scale(1.05); 
 }
-
 
 .team-member button:active {
     transform: scale(1); 
