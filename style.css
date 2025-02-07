@@ -230,7 +230,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .github-section a {
