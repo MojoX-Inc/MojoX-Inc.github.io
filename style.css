@@ -4,12 +4,12 @@
     --secondary-color: #2a5298;
     --background-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     --text-color: white;
+    --card-text-color: black;
     --card-bg: rgba(255, 255, 255, 0.9);
     --card-hover-shadow: rgba(0, 0, 0, 0.3);
     --section-bg-light: #f5f5f5;
     --section-bg-dark: rgba(0, 0, 0, 0.1);
 }
-
 
 body {
     margin: 0;
@@ -25,7 +25,6 @@ header {
     padding: 3rem;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
-    animation: fadeIn 2s ease-in-out;
 }
 
 header h1 {
@@ -45,6 +44,42 @@ main {
     padding: 2rem;
 }
 
+.animation {
+    position: relative;
+    opacity: 0%;
+    animation: fadeIn 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.A1 {
+    animation-delay: 1.3s;
+}
+.A2 {
+    animation-delay: 1.6s;
+}
+.A3 {
+    animation-delay: 1.9s;
+}
+.B1 {
+    animation-delay: 2.3s;
+}
+.B2 {
+    animation-delay: 2.6s;
+}
+.B3 {
+    animation-delay: 2.9s;
+}
+.C1 {
+    animation-delay: 3.3s;
+}
+.C2 {
+    animation-delay: 3.6s;
+}
+.D1 {
+    animation-delay: 3.9s;
+}
+.E1 {
+    animation-delay: 4.4s;
+}
 
 .card {
     background: var(--card-bg);
@@ -54,7 +89,7 @@ main {
     text-align: center;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; 
-    position: relative; 
+    position: relative;
     overflow: hidden;
 }
 
@@ -71,9 +106,17 @@ main {
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transition: all 0.5s;
+    border-radius: 5rem;
     box-shadow: 0 12px 25px var(--card-hover-shadow);
     filter: brightness(1.05); 
+}
+
+.card:not(hover) {
+    transition: all 0.5s;
+    border-radius: 1rem;
+    box-shadow: 0 0px 0px var(--card-hover-shadow);
+    filter: brightness(1); 
 }
 
 .card h2 {
@@ -88,7 +131,7 @@ main {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1rem;
-    color: var(--text-color, #555); 
+    color: var(--card-text-color, #555); 
 }
 
 .card button {
@@ -160,6 +203,26 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.team-member button {
+    padding: 0.8rem 1.6rem; 
+    background: var(--primary-color);
+    border: none;
+    border-radius: 2rem;
+    color: var(--button-text-color, white); 
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+.team-member button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05); 
+}
+
+.team-member button:active {
+    transform: scale(1); 
+}
 
 .github-section {
     padding: 3rem;
@@ -191,25 +254,47 @@ footer {
 
 
 .gallery-section {
+    margin: 3rem;
     padding: 3rem;
     text-align: center;
-    background: white;
-    color: black;
+    border-radius: 2rem;
+    background-color: rgba(0, 204, 255, 0.250);
 }
 
 .gallery-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem;
+}
+
+
+@media (orientation: portrait) {
+        .gallery{
+            flex-direction: column;
+        }
+        .gallery img{
+            width: 75%;
+        }
+}
+
+@media (orientation: landscape) {
+    .gallery{
+        flex-direction: row;
+    }
+    .gallery img{
+        width: 35%;
+    }
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1rem;
+    overflow-anchor: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
 .gallery img {
-    width: 100%;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -221,9 +306,10 @@ footer {
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        transform: translateY(0px);
     }
     to {
-        opacity: 1;
+        opacity: 100%;
+        transform: translateY(-21px);
     }
 }
