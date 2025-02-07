@@ -163,67 +163,52 @@ footer {
 }
 
 
-.team-section {
-    padding: 3rem;
-    text-align: center;
-    background: var(--section-bg-light);
-    color: black;
-}
-
-.team-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.team {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
 .team-member {
     background: white;
     border-radius: 1rem;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .team-member:hover {
-    transform: scale(1.05);
+    transform: scale(1.06); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); 
 }
 
 .team-member img {
-    width: 100px;
-    height: 100px;
+    width: 120px; 
+    height: 120px; 
     border-radius: 50%;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12); 
+    object-fit: cover; 
 }
 
 .team-member button {
-    padding: 0.8rem 1.6rem; 
-    background: var(--primary-color);
+    padding: 0.8rem 1.6rem;
+    background: var(--primary-color, #007bff); 
     border: none;
     border-radius: 2rem;
-    color: var(--button-text-color, white); 
+    color: var(--button-text-color, white);
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
     font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .team-member button:hover {
-    background: var(--secondary-color);
-    transform: scale(1.05); 
+    background: var(--secondary-color, #0056b3); 
+    transform: scale(1.06); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
 }
 
 .team-member button:active {
-    transform: scale(1); 
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
-
 .github-section {
     padding: 3rem;
     text-align: center;
