@@ -193,34 +193,37 @@ footer {
 }
 
 .team-member img {
-    width: 100px;
-    height: 100px;
+    width: 120px; /* Slightly larger image */
+    height: 120px; /* Slightly larger image */
     border-radius: 50%;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem; /* Increased spacing */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12); /* Enhanced image shadow */
+    object-fit: cover; /* Ensure image fills the circle */
 }
 
 .team-member button {
-    padding: 0.8rem 1.6rem; 
-    background: var(--primary-color);
+    padding: 0.8rem 1.6rem;
+    background: var(--primary-color, #007bff); /* Default primary color */
     border: none;
     border-radius: 2rem;
-    color: var(--button-text-color, white); 
+    color: var(--button-text-color, white);
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added background-color */
     font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
 }
 
 .team-member button:hover {
-    background: var(--secondary-color);
-    transform: scale(1.05); 
+    background: var(--secondary-color, #0056b3); /* Default secondary color */
+    transform: scale(1.06); /* Slightly larger scale */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .team-member button:active {
-    transform: scale(1); 
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow when active */
 }
-
 .github-section a {
     text-decoration: none;
     color: var(--text-color);
